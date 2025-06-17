@@ -31,7 +31,7 @@ Aplicação RESTful desenvolvida com NestJS que permite o gerenciamento de usuá
 ## ⚙️ Tecnologias Utilizadas
 
 - **NestJS** – Framework backend principal
-- **PostgreSQL** – Banco NoSQL para logs
+- **PostgreSQL** – Banco de Dadoss
 - **JWT** – Autenticação
 - **Docker** – Containerização para facilitar o deploy
 
