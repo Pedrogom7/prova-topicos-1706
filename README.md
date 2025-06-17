@@ -49,15 +49,15 @@ Aplicação RESTful desenvolvida com NestJS que permite o gerenciamento de usuá
 
 ```bash
 # Clonar o projeto
-git clone https://github.com/seuusuario/todo-list-api
+git clone https://github.com/Pedrogom7/prova-topicos-1706
 
 # Entrar no diretório
-cd todo-list-api
+cd prova-topicos-1706
 
 # Instalar dependências
 npm install
 
-# Rodar o banco via Docker
+# Rodar o banco via Docker - TEM QUE TER DOCKER HUB INSTALADO SE FOR NO WINDOWS
 docker compose up -d
 
 # Iniciar a API
