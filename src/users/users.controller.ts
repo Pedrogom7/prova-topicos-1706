@@ -1,23 +1,26 @@
 import { Body, Controller, Get, Post, UnauthorizedException } from '@nestjs/common';
 import { UsersService } from './users.service';
+import { Public } from 'src/auth/public.decorator';
 
 @Controller('users')
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private readonly usersService: UsersService) { }
 
+  @Public()
   @Post('register')
   async register(
-    @Body() body: { 
-      username: string; 
+    @Body() body: {
+      username: string;
       password: string;
-      adminCode: string }
+      adminCode: string
+    }
   ) {
     const validAdminCode = process.env.ADMIN_CODE;
     if (body.adminCode !== validAdminCode) {
       throw new UnauthorizedException('Invalid admin code');
     }
     return this.usersService.create(
-      body.username, 
+      body.username,
       body.password
     );
   }
